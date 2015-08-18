@@ -1,5 +1,9 @@
 class ShortenedUrlController < ApplicationController
 
+  def index
+    render nothing: true, status: 404
+  end
+
   def create
     @url = ShortenedUrl.create params[:url]
     if @url.errors.any?
