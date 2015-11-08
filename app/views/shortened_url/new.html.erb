@@ -1,0 +1,10 @@
+<h1>Shorten a URL...</h1>
+
+<div id="url">
+  <h2>Select an Address</h2>
+  <%= form_for @url, url: create_path(@url), remote: true do |f| %>
+    <%= f.label :original_url %>
+    <%= f.text_field :original_url %>
+    <%= f.submit %>
+  <% end %>
+</div>

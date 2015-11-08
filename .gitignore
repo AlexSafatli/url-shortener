@@ -1,10 +1,11 @@
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
+public
+bin
+log
+db
+tmp
 /public/system
 /coverage/
 /spec/tmp

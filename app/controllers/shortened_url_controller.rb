@@ -1,11 +1,16 @@
 class ShortenedUrlController < ApplicationController
 
+  def new
+    @url = ShortenedUrl.new
+  end
+
   def create
     @url = ShortenedUrl.create params[:url]
     if @url.errors.any?
       render nothing: true, status: 400
     else
       respond_to do |f|
+        f.js
         f.json { return { id: @url.id } }
       end
     end
